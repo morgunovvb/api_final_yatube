@@ -11,14 +11,14 @@ class PostSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Post
-        fields = ('id', 'author', 'text', 'pub_date', 'group', 'image')
+        fields = ('__all__')
 
 
 class GroupSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Group
-        fields = ('id', 'title', 'slug', 'description')
+        fields = ('__all__')
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -29,7 +29,7 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Comment
-        fields = ('id', 'author', 'post', 'text', 'created')
+        fields = ('__all__')
         read_only_fields = ('id', 'post', 'created')
 
 
@@ -46,7 +46,7 @@ class FollowSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Follow
-        fields = ('following', 'user')
+        fields = ('__all__')
         validators = (
             serializers.UniqueTogetherValidator(
                 queryset=model.objects.all(),
@@ -67,4 +67,4 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ('id', 'username', 'first_name', 'last_name', 'posts')
+        fields = ('__all__')
