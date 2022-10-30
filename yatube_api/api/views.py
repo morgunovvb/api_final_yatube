@@ -41,10 +41,10 @@ class CommentViewSet(viewsets.ModelViewSet):
 
 
 class CreateListViewSet(
-    mixins.CreateModelMixin,
-    mixins.ListModelMixin,
-    viewsets.GenericViewSet):
-    pass
+        mixins.CreateModelMixin,
+        mixins.ListModelMixin,
+        viewsets.GenericViewSet):
+            pass
 
 
 class FollowViewSet(CreateListViewSet):
