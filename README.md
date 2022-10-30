@@ -11,7 +11,7 @@ _______
 Клонировать репозиторий и перейти в него в командной строке:
 https://github.com/morgunovvb/api_final_yatube
 
-Перейти в зозданную директорию:
+Перейти в созданную директорию:
 cd api_final_yatube
 
 Cоздать виртуальное окружение:
@@ -59,15 +59,18 @@ GET .../api/v1/groups/2/
 } 
 
 Использованные технологии:
-Django==2.2.16
+Django==4.1.2
 pytest==6.2.4
 pytest-pythonpath==0.7.3
 pytest-django==4.4.0
 djangorestframework==3.12.4
 djangorestframework-simplejwt==4.7.2
-Pillow==8.3.1
+Pillow==9.3.0
 PyJWT==2.1.0
 requests==2.26.0
+djoser==2.1.0
+pytz==2022.5
+db.sqlite3
 
 
 
