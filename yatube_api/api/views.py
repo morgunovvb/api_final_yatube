@@ -44,7 +44,7 @@ class CreateListViewSet(
         mixins.CreateModelMixin,
         mixins.ListModelMixin,
         viewsets.GenericViewSet):
-        pass
+    pass
 
 
 class FollowViewSet(CreateListViewSet):
